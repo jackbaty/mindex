@@ -33,23 +33,23 @@ TMP_FNAME = "mindex"
 
 LATEXSTR = Template(r"""
 \documentclass{article}
-\usepackage[top=${margin_y}in, bottom=${margin_y}in, right=${margin_x}in, left=${margin_x}in, showframe]{geometry}
+\usepackage[top=${margin_y}in, bottom=${margin_y}in, right=${margin_x}in, left=${margin_x}in]{geometry}
 \usepackage[utf8x]{inputenc}
 \usepackage{multicol}
 \usepackage[columns=${cols}, indentunit=${indent}, columnsep=${gutter}, font=footnotesize, justific=raggedright]{idxlayout}
 \usepackage[sc, osf]{mathpazo}
 \usepackage{titlesec}
-\renewcommand{\indexname}{\vskip -0.55in}
+%\renewcommand{\indexname}{\vskip -0.55in}
 
 \begin{document}
 \pagestyle{empty}
-\begin{center}\small \emph{${title}}\end{center}
+\begin{center}\large \textbf{${title}}\end{center}
 \begin{theindex}
 ${content}
 \end{theindex}
 
 \vfill
-\begin{center}\small \emph{${closing}}\end{center}
+\begin{center}\footnotesize \emph{${closing}}\end{center}
 \end{document}
 """)
 
